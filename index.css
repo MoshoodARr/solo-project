@@ -8,11 +8,10 @@ body{
 
 .overall{
     background: white;
+    max-width: 90%;
     width: 40%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    margin: 0 auto;
     border: 6px solid whitesmoke;
     border-radius: 30px;
     }
@@ -65,14 +64,25 @@ body{
         color: whitesmoke;
         text-shadow: 0 0 2px black;
         border-radius: 10px;
-        display: flex; 
-        justify-content: space-around; 
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around;
+        align-items: center; 
         gap: 20px;
         font-size: 12px;
         margin-bottom: -10px;
         list-style: none;
     }
 
+}
+
+@media (max-width: 600px) {
+    .header h4 {
+        font-size: 16px;
+    }
+    .osh {
+        font-size: 14px;
+    }
 }
 
 .att-wrapper{
@@ -92,7 +102,7 @@ body{
 .att-places{
     display: flex; 
     justify-content: space-around;
-    /* gap: 7px; */
+    /* gap: 5px; */
     p{
         border: .5px solid #c7d2f0;
     }
@@ -122,17 +132,20 @@ body{
 }
 .my-pic {
     width: 90px;
-    height: 170px;
+    height: 140px;
     border-radius: 5px;
     border-bottom: 3px solid #144273;
     margin-left: -10px;
+    margin-top: 50px;
 }
 
 
 .portfolio-wrapper{
     background-color: rgb(86, 211, 205);
-    width: 280px;
-    height: 185px;
+    width: 90%;
+    max-width: 350px;
+
+    height: 170px;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -162,5 +175,44 @@ body{
     .p2{
         font-size: 13px;
         font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+    .overall {
+        width: 90%;
+    }
+
+    .header h4 {
+        font-size: 14px;
+    }
+
+    .list-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .att-places {
+        flex-direction: column;
+    }
+
+    .att-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .portfolio-wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .inner-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-pic {
+        width: 120px;
+        height: auto;
     }
 }
